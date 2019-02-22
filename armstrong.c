@@ -16,5 +16,5 @@ void main()
 if(new==arm)
 printf("NUMBER IS ARMSTRONG");
 else 
-printf("\nNOT PALINDROME");
+printf("\nNOT ARMSTRONG");
 }
