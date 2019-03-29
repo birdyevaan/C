@@ -1,0 +1,72 @@
+#include<stdio.h>
+void main()
+{
+int n,m,sum=0;
+int A[100][100],B[100][100],C[100][100];
+printf("ENTER THE NUMBER OF ROWS AND COLOUMNS");
+scanf("%d",&n);
+for(int i=0;i<n;i++)
+{
+	for(int j=0;j<n;j++)
+	{
+		printf("ENTER THE ELEMENT");
+		scanf("%d",&A[i][j]);
+	}
+}
+for(int i=0;i<n;i++)
+{
+	for(int j=0;j<n;j++)
+	{
+		printf("%d",A[i][j]);
+	}
+	printf("\n");
+}
+int ch;
+printf("\n1:MATRIX ADDITION\n2:SUM OF DIAGONAL\n3:TRANSPOSE");
+scanf("%d",&ch);
+switch(ch)
+{
+	case 1:		
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			printf("ENTER THE ELEMENT");
+			scanf("%d",&B[i][j]);
+			C[i][j]=A[i][j]+B[i][j];
+		}
+	}
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+		printf("%d",C[i][j]);
+		}
+	printf("\n");
+	}
+	break;
+	case 2:	
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+			if(i==j)			
+			sum=sum+A[i][j];
+			}
+		}
+		printf("%d",sum);
+		break;
+	
+	case 3:
+
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			C[i][j]=A[j][i];
+			printf("%d",C[i][j]);
+		}
+	printf("\n");
+	}	
+}
+}
