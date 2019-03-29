@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-int n,m,sum=0;
+int n,m,sum=0,sumrow=0;;
 int A[100][100],B[100][100],C[100][100];
 printf("ENTER THE NUMBER OF ROWS AND COLOUMNS");
 scanf("%d",&n);
@@ -22,7 +22,7 @@ for(int i=0;i<n;i++)
 	printf("\n");
 }
 int ch;
-printf("\n1:MATRIX ADDITION\n2:SUM OF DIAGONAL\n3:TRANSPOSE");
+printf("\n1:MATRIX ADDITION\n2:SUM OF DIAGONAL\n3:TRANSPOSE\n4:FIND SUM OF ROW");
 scanf("%d",&ch);
 switch(ch)
 {
@@ -68,5 +68,17 @@ switch(ch)
 		}
 	printf("\n");
 	}	
+	case 4:
+	for(int i=0;i<n;i++)
+	{	
+	int sumrow=0;
+		for(int j=0;j<n;j++)
+		{
+			sumrow=sumrow+A[i][j];
+		}
+		printf("\nTHE SUM OF %d ROW IS %d",i,sumrow);
+	}
 }
 }
+
+
