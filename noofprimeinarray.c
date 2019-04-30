@@ -20,7 +20,7 @@ printf("%d",sum);
 void main()
 {
 int n,B[100];
-printf("ENTER THE NUMBER OF ELEMENST");
+printf("ENTER THE NUMBER OF ELEMENTS");
 scanf("%d",&n);
 for(int i=0;i<n;i++)
 {
